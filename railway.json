@@ -1,0 +1,40 @@
+{
+  "name": "monolito-promptos",
+  "build": {
+    "builder": "dockerfile"
+  },
+  "deploy": {
+    "startCommand": "python monolito.py"
+  },
+  "plugins": [
+    {
+      "id": "postgres",
+      "name": "PostgreSQL",
+      "options": {
+        "version": "14"
+      }
+    }
+  ],
+  "environments": {
+    "production": {
+      "variables": [
+        {
+          "key": "WEBHOOK_SECRET",
+          "value": ""
+        },
+        {
+          "key": "GITHUB_TOKEN",
+          "value": ""
+        },
+        {
+          "key": "LLM_TIMEOUT",
+          "value": "20"
+        },
+        {
+          "key": "LLM_RETRIES",
+          "value": "2"
+        }
+      ]
+    }
+  }
+}
