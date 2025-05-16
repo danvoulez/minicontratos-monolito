@@ -1,0 +1,6 @@
+# Exemplo de variáveis de ambiente para rodar no Railway
+
+WEBHOOK_SECRET=seu_token_seguro_do_github_app
+GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+LLM_TIMEOUT=20
+LLM_RETRIES=2
